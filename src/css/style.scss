@@ -1,3 +1,134 @@
-html {
-  background-color: rgb(156, 72, 72);
+@import '_variable.scss';
+
+html, body {
+  background-color: $bgc;
+}
+
+*{padding: 0; margin: 0; text-decoration: none; list-style: none;}
+
+#root{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#title{
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  background-color: $light_sky;
+  width: 100%;
+  height: 10%;
+  align-items: center;
+  justify-content: center;
+  h1{
+    color: #fff;
+  }
+}
+
+form{
+  margin-top: 10%;
+  input{
+    padding: 10px;
+    border: 1px solid $deep_sky;
+    border-radius: 20px;
+    &:focus{
+      outline: $light_sky;
+    }
+  }
+  button{
+    padding: 8px;
+    background-color: $light_sky;
+    border: 0px solid #000;
+    border-radius: 20px;
+    margin-left: 5px;
+    cursor: pointer;
+    color: #fff;
+    &:hover{
+      background-color: $deep_sky;
+      transition: .2s;
+    }
+  }
+}
+
+#login{
+  width: 400px;
+  height: 200px;
+  @include box;
+}
+
+#todo{
+  @include box;
+  width: 700px;
+  padding: 50px 0 50px 0;
+  .date{
+    margin-top: 10px;
+    text-align: right;
+    width: 77%;
+    color: $gray;
+  }
+}
+
+#todo_list{
+  width: 32%;
+  li{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    span{
+      .yet, .done{
+        margin-right: 5px;
+        cursor: pointer;
+      }
+    }
+    button{
+      background-color: #fff;
+      border: 1px solid $gray;
+      color: $gray;
+      margin-left: 10px;
+      padding: 4px;
+      border-radius: 10px;
+      font-size: 12px;
+      cursor: pointer;
+      &:hover{
+        background-color: $gray;
+        color: #fff;
+        transition: .2s;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  h1{
+    font-size: 25px;
+  }
+  h2{
+    font-size: 20px;
+  }
+  #login, #todo{
+    width: 90%;
+  }
+
+  #todo{
+    h1{
+      font-size: 20px;
+      padding: 0 25px;
+    }
+    .date{
+      font-size: 13px;
+    }
+  }
+}
+
+#todo_list{
+  width: 70%;
+  span{
+    font-size: 13px;
+  }
 }

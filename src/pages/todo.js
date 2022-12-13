@@ -43,19 +43,21 @@ function Todo(){
   
 
   return(
-    <div>
+    <div id="todo">
       <h1>{username}님 오늘도 행복한 하루 보내세요!</h1>
-      <span>{year}/{month}/{day} {hours}:{minutes}</span>
+      <span className="date">{year}/{month}/{day} {hours}:{minutes}</span>
       <TodoInput onAdd={onAdd}/>
-      <ul>
-        {
-          todos.map((todos) => (
-            <TodoItem
-            key={todos.id}
-            todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo}
-            />))
-        }
-      </ul>
+      <div id='todo_list'>
+        <ul>
+          {
+            todos.map((todos) => (
+              <TodoItem
+              key={todos.id}
+              todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo}
+              />))
+          }
+        </ul>
+      </div>
     </div>
   )
 }

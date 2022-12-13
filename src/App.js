@@ -8,7 +8,11 @@ import Todo from "./pages/todo";
 
 function App() {
   return (
+
     <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <div id="title">
+        <h1>Todo List</h1>
+      </div>
       <Routes>
         <Route path="/" element={<Main/>} />
         <Route path="/main/todo" element={<Todo/>} />

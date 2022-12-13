@@ -1,0 +1,14 @@
+$bgc: rgb(207, 240, 255);
+$light_sky: rgb(138, 218, 255);
+$deep_sky: rgb(57, 192, 255);
+$gray: rgb(158, 158, 158);
+
+@mixin box{
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+

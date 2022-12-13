@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { debounce } from 'lodash';
+import '../css/style.scss';
 
 
 function Main(){
@@ -32,8 +33,8 @@ function Main(){
   }
 
   return(
-    <div>
-      <h1>이름을 입력하세요.</h1>
+    <div id="login">
+      <h2>이름을 입력하세요.</h2>
       <form>
         <input type="text" 
           placeholder="What's your name?" id="username_input"
